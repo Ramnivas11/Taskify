@@ -1,0 +1,234 @@
+/* General styling */
+body {
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f0f8ff;
+}
+
+/* Styling for the form container */
+.form {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 350px;
+    max-width: 100%;
+    box-sizing: border-box;
+}
+
+/* Form card heading */
+h1 {
+    text-align: center;
+    color: #333;
+    font-size: 1.8em;
+    margin-bottom: 20px;
+}
+
+/* Flexbox for aligning input and button */
+.form-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Input field styling */
+.todo-text {
+    flex-grow: 1;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    margin-right: 10px;
+    box-sizing: border-box;
+    transition: all 0.3s ease;
+}
+
+/* Input field expanding if needed */
+.todo-text:focus {
+    outline: none;
+    border-color: #4CAF50;
+}
+
+/* Add button styling */
+#todosubmit {
+    padding: 10px;
+    font-size: 18px;
+    border-radius: 5px;
+    background-color: #00bfff;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    min-width: 50px;
+}
+
+/* Add button hover */
+#todosubmit:hover {
+    background-color: #0099cc;
+}
+
+/* Task list styling */
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* Individual task item */
+.todo-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f9f9f9;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    transition: transform 0.2s ease;
+    word-wrap: break-word;
+    box-sizing: border-box;
+}
+
+/* Flexbox to position task text and buttons */
+.todo-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+/* Task item hover effect */
+.todo-item:hover {
+    transform: translateX(10px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Task text styling */
+.todo-item-text {
+    flex-grow: 1;
+    word-wrap: break-word;
+    padding-right: 10px;
+    text-align: left;
+}
+
+/* Complete button styling */
+.complete-btn {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-left: 10px;
+}
+
+/* Complete button hover */
+.complete-btn:hover {
+    background-color: #45a049;
+}
+
+/* Delete button styling */
+.delete-btn {
+    background-color: #f44336;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+/* Delete button hover */
+.delete-btn:hover {
+    background-color: #e60000;
+}
+
+/* Flexbox for buttons to be aligned right */
+.todo-item-buttons {
+    display: flex;
+    gap: 10px;
+    margin-left: auto;
+    justify-content: flex-end;
+}
+
+/* For responsive design */
+@media (max-width: 400px) {
+    .form {
+        width: 90%;
+    }
+
+    .form-card {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    #todosubmit {
+        width: 100%;
+        margin-top: 10px;
+    }
+
+    .todo-item {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .complete-btn, .delete-btn {
+        width: 100%;
+        margin-top: 5px;
+    }
+}
+/* Existing code remains the same */
+
+/* For responsive design */
+@media (max-width: 400px) {
+    .form {
+        width: 90%;
+    }
+
+    .form-card {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    #todosubmit {
+        width: 100%;
+        margin-top: 10px;
+    }
+
+    .todo-item {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .complete-btn, .delete-btn {
+        width: 100%;
+        margin-top: 5px;
+    }
+}
+
+/* Add media query for mobile devices */
+@media (max-width: 600px) {
+    .form {
+        width: 80%;
+    }
+
+    .todo-item {
+        padding: 5px;
+    }
+
+    .todo-item-text {
+        font-size: 14px;
+    }
+
+    .complete-btn, .delete-btn {
+        font-size: 14px;
+        padding: 3px 5px;
+    }
+}
